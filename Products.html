@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+            background-color: #f0f8ff;
+            color: #000080;
+        }
+        header {
+            background: #000080;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        header img {
+            max-width: 100px;
+        }
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        nav .news-ticker {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        nav .news-ticker p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 20s linear infinite;
+            color: #ffffff;
+        }
+        @keyframes ticker {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        nav .nav-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #87ceeb;
+        }
+        .hero-section {
+            position: relative;
+            text-align: center;
+            background: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126269&authkey=%21AMa3t5Qqfo8OaZ4&width=1920&height=540') no-repeat center center/cover;
+            height: 270px;
+            color: #ffffff;
+            animation: backgroundAnimation 16s infinite;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126260&authkey=%21AHFbAvHevlx-iDk&width=1920&height=1080'); }
+            25% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126256&authkey=%21ALqm9xqPmw2C7dw&width=1920&height=1080'); }
+            50% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126257&authkey=%21AAFvSQZWlWN9ldo&width=1920&height=1080'); }
+            75% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126258&authkey=%21AM4Vs6j7Ugl7AaE&width=1920&height=1080'); }
+            100% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126256&authkey=%21ALqm9xqPmw2C7dw&width=1920&height=1080'); }            
+        }
+        .features {
+            padding: 50px 20px;
+            background-color: #ffffff;
+            color: #000080;
+        }
+        .features h2 {
+            margin-bottom: 30px;
+            font-size: 32px;
+            text-align: center;
+        }
+        .features .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            justify-content: space-between;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+        .features .feature img {
+            max-width: 100%;
+            max-height: 200px;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .features .feature .content {
+            width: 100%;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+        .features .feature .content h3 {
+            font-size: 24px;
+            color: #000080;
+            margin-bottom: 10px;
+        }
+        .features .feature .content p {
+            font-size: 16px;
+            color: #87ceeb;
+        }        
+        footer {
+            background: #000080;
+            padding: 20px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+        footer a {
+            color: #87ceeb;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ffffff;
+        }
+        @media (min-width: 768px) {
+            nav .news-ticker {
+                width: 500px;
+                margin-right: 20px;
+            }
+            .features .feature {
+                flex-direction: row;
+            }
+            .features .feature:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+            .features .feature img {
+                width: 50%;
+            }
+            .features .feature .content {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <iframe width="50" height="50" src="https://xd.adobe.com/embed/cd9d6993-3766-48c4-870b-985556294377-98ce/" frameborder="0" allowfullscreen></iframe>
+        <nav>
+            <div class="news-ticker">
+                <p>ZetaSpot is now available in Embu!</p>
+            </div>
+            <div class="nav-links">
+                <a href="Home.html">Home</a>                
+                <a href="About us.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <div class="hero-section">
+    </div>
+    <section class="features">
+        <h2>Our Products</h2>
+        <div class="feature" onclick="window.location='#'">
+            <img src="https://onedrive.live.com/embed?resid=6E328A87737901D5%2126267&authkey=%21AGq_G9bn5R49GFM&width=600&height=200" alt="Z-Tech Spot">
+            <div class="content">
+                <h3>Z-Tech Spot</h3>
+                <p>We revolutionize public spaces by providing reliable internet connectivity through our hotspot service, connecting people wherever they go. 
+                    Empowering communities by turning public areas into digital hubs, fostering connectivity and engagement.
+                </p>
+            </div>
+        </div>
+        <div class="feature" onclick="window.location='#'">
+            <img src="https://onedrive.live.com/embed?resid=6E328A87737901D5%2126266&authkey=%21ADZqyl5iMrme9cU&width=600&height=200" alt="Z-Tech Wifi">
+            <div class="content">
+                <h3>Z-Tech Wifi</h3>
+                <p>We bring the power of the internet to households, fostering connectivity and access to information for all.
+                    We empower families with seamless internet access for education, work, entertainment, and communication.
+                    Our Wifi offers unparalleled speed and reliability, ensuring you stay connected without interruptions.
+                </p>
+            </div>
+        </div>
+        <div class="feature" onclick="window.location='ZWS.html'">
+            <img src="https://onedrive.live.com/embed?resid=6E328A87737901D5%2126265&authkey=%21AJ-BYXf_C_OprWU&width=600&height=200" alt="Z-Tech Wifi Solutions">
+            <div class="content">
+                <h3>Z-Tech Wifi Solutions</h3>
+                <p>Our shops are more than just stores; they're hubs of connectivity, offering top-tier internet and networking equipment. 
+                    We provide not just products, but comprehensive solutions tailored to meet the connectivity needs of businesses and individuals alike. 
+                </p>
+            </div>
+        </div>
+        <div class="feature" onclick="window.location='#'">
+            <img src="https://onedrive.live.com/embed?resid=6E328A87737901D5%2126268&authkey=%21APXoMQkOgZg7QjM&width=600&height=200" alt="Z-Tech Systems">
+            <div class="content">
+                <h3>Z-Tech Systems</h3>
+                <p>We tailor software solutions to meet the unique needs of businesses, helping them thrive in the digital landscape with seamless integration and advanced functionality. 
+                    Comprehensive systems designed to integrate seamlessly with your existing infrastructure.
+                    Our software and system solutions empower businesses with tools like POS and CRM systems, driving efficiency and growth.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 ZetaHub. All rights reserved.</p>
+        <a href="https://onedrive.live.com/embed?resid=6E328A87737901D5%2125831&authkey=!AO6Y3jQZJLu3Vhg&em=2">Privacy Policy</a> | 
+        <a href="https://onedrive.live.com/embed?resid=6E328A87737901D5%2125839&authkey=!AIuXPPJFvealJ7E&em=2">Terms of Service</a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF7H8IpEIeKVvoXqIJ6B3eCh3Ov6OEUlgm/Ze6p33nA" crossorigin="anonymous"></script>
+</body>
+</html>
+ 

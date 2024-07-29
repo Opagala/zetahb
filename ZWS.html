@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Tech WiFi Solutions</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #000080;
+        }
+        header {
+            background: #000080;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            flex-wrap: wrap;
+            color: #ffffff;
+        }
+        header img {
+            max-width: 100px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #87ceeb;
+        }
+        .hero-section {
+            position: relative;
+            text-align: center;
+            background: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126269&authkey=%21AMa3t5Qqfo8OaZ4&width=1920&height=540') no-repeat center center/cover;
+            height: 270px;
+            color: #ffffff;
+            animation: backgroundAnimation 16s infinite;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126260&authkey=%21AHFbAvHevlx-iDk&width=1920&height=1080'); }
+            25% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126256&authkey=%21ALqm9xqPmw2C7dw&width=1920&height=1080'); }
+            50% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126257&authkey=%21AAFvSQZWlWN9ldo&width=1920&height=1080'); }
+            75% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126258&authkey=%21AM4Vs6j7Ugl7AaE&width=1920&height=1080'); }
+            100% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126256&authkey=%21ALqm9xqPmw2C7dw&width=1920&height=1080'); }            
+        }
+        .filter-section {
+            padding: 20px;
+            text-align: center;
+            background-color: #87ceeb;
+        }
+        .filter-section select, .filter-section input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        .product-item {
+            width: 200px;
+            padding: 20px;
+            background-color: #87ceeb;
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+            position: relative;
+            cursor: pointer;
+        }
+        .product-item:hover {
+            transform: scale(1.05);
+            background-color: #000080;
+            color: #ffffff;
+        }
+        .product-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+        .product-item .product-details {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000080;
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            z-index: 10;
+        }
+        .product-item:hover .product-details {
+            display: block;
+        }
+        .cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #000080;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 20;
+        }
+        .cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .cart ul li {
+            margin-bottom: 10px;
+        }
+        .cart ul li span {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .cart ul li span:hover {
+            color: #87ceeb;
+        }
+        footer {
+            background: #000080;
+            padding: 20px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+        footer a {
+            color: #87ceeb;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://onedrive.live.com/embed?resid=6E328A87737901D5%2126134&authkey=%21ACOMlC77z1WoIH8&width=2696&height=1400" alt="Z-Tech WiFi Solutions">
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="Products.html">Products</a>
+            <a href="#">News</a>
+            <a href="About us.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <div class="hero-section">
+    </div>
+    <div class="filter-section">
+        <select id="filter-category">
+            <option value="">Select Category</option>
+            <option value="wifi">WiFi</option>
+            <option value="networking">Networking</option>
+            <option value="accessories">Accessories</option>
+        </select>
+        <select id="filter-brand">
+            <option value="">Select Brand</option>
+            <option value="brand1">Brand 1</option>
+            <option value="brand2">Brand 2</option>
+            <option value="brand3">Brand 3</option>
+        </select>
+        <input type="number" id="filter-min-price" placeholder="Min Price">
+        <input type="number" id="filter-max-price" placeholder="Max Price">
+        <button onclick="applyFilters()">Apply Filters</button>
+    </div>
+    <div class="product-list" id="product-list">
+        <!-- Products will be dynamically generated here -->
+    </div>
+    <div class="cart" id="cart">
+        <h3>Cart</h3>
+        <ul id="cart-items"></ul>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 ZetaHub. All rights reserved.</p>
+        <a href="https://onedrive.live.com/embed?resid=6E328A87737901D5%2125831&authkey=!AO6Y3jQZJLu3Vhg&em=2">Privacy Policy</a> | 
+        <a href="https://onedrive.live.com/embed?resid=6E328A87737901D5%2125839&authkey=!AIuXPPJFvealJ7E&em=2">Terms of Service</a>
+    </footer>
+    <script>
+        const products = [
+            { id: 1, name: 'WiFi Router', price: 5000, category: 'wifi', brand: 'brand1', description: 'High-speed WiFi router.' },
+            { id: 2, name: 'Network Cable', price: 2000, category: 'networking', brand: 'brand2', description: 'Durable network cable.' },
+            { id: 3, name: 'USB Adapter', price: 1000, category: 'accessories', brand: 'brand3', description: 'USB to Ethernet adapter.' },
+            { id: 4, name: 'Mikrotik', price: 5000, category: 'wifi', brand: 'brand1', description: 'High-speed WiFi router.' },
+            { id: 5, name: 'Crimping tool', price: 2000, category: 'networking', brand: 'brand2', description: 'Durable network cable.' },
+            { id: 6, name: 'Connector', price: 1000, category: 'accessories', brand: 'brand3', description: 'USB to Ethernet adapter.' },
+            { id: 7, name: 'Router box', price: 5000, category: 'wifi', brand: 'brand1', description: 'High-speed WiFi router.' },
+            { id: 8, name: 'Reverse PoE Switch', price: 2000, category: 'networking', brand: 'brand2', description: 'Durable network cable.' },
+            { id: 9, name: 'Generic PoE', price: 1000, category: 'accessories', brand: 'brand3', description: 'USB to Ethernet adapter.' },
+            { id: 10, name: 'M5 Radio', price: 5000, category: 'wifi', brand: 'brand1', description: 'High-speed WiFi router.' },
+            { id: 11, name: 'Closure', price: 2000, category: 'networking', brand: 'brand2', description: 'Durable network cable.' },
+            { id: 12, name: 'RJ', price: 1000, category: 'accessories', brand: 'brand3', description: 'USB to Ethernet adapter.' },
+            { id: 13, name: 'WiFi Router', price: 5000, category: 'wifi', brand: 'brand1', description: 'High-speed WiFi router.' },
+            { id: 14, name: 'Generic Switch', price: 2000, category: 'networking', brand: 'brand2', description: 'Durable network cable.' },
+            { id: 15, name: 'Fiber Optical Stripper', price: 1000, category: 'accessories', brand: 'brand3', description: 'USB to Ethernet adapter.' },
+            // Add more products here
+        ];
+        
+        const cart = [];
+
+        function renderProducts(productList) {
+            const productContainer = document.getElementById('product-list');
+            productContainer.innerHTML = '';
+            productList.forEach(product => {
+                const productItem = document.createElement('div');
+                productItem.className = 'product-item';
+                productItem.onclick = () => addToCart(product.id);  // Add product to cart on click
+                productItem.innerHTML = `
+                    <img src="https://via.placeholder.com/100" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>Kshs ${product.price}</p>
+                    <div class="product-details">
+                        <p>${product.description}</p>
+                    </div>
+                `;
+                productContainer.appendChild(productItem);
+            });
+        }
+
+        function applyFilters() {
+            const category = document.getElementById('filter-category').value;
+            const brand = document.getElementById('filter-brand').value;
+            const minPrice = document.getElementById('filter-min-price').value;
+            const maxPrice = document.getElementById('filter-max-price').value;
+            const filteredProducts = products.filter(product => {
+                return (!category || product.category === category) &&
+                    (!brand || product.brand === brand) &&
+                    (!minPrice || product.price >= minPrice) &&
+                    (!maxPrice || product.price <= maxPrice);
+            });
+            renderProducts(filteredProducts);
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            cart.push(product);
+            updateCart();
+        }
+
+        function removeFromCart(productId) {
+            const productIndex = cart.findIndex(p => p.id === productId);
+            if (productIndex > -1) {
+                cart.splice(productIndex, 1);
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            cart.forEach(product => {
+                const cartItem = document.createElement('li');
+                cartItem.innerHTML = `
+                    ${product.name} - Kshs ${product.price} <span onclick="removeFromCart(${product.id})">Remove</span>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+        }
+
+        function checkout() {
+            alert('Checkout not implemented yet.');
+        }
+
+        // Initialize product list
+        renderProducts(products);
+    </script>
+</body>
+</html>

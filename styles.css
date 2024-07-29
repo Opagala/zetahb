@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;   
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header {
+    background-color: #0611ad;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+nav a:hover {
+    color: #87ceeb;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;    
+}
+
+main {
+    padding: 80px 20px 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: #f0f0f0;
+}
+
+.hero-content img,
+.hero-content video {
+    max-height: 100%;
+    margin: 0 10px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.contact-form h1 {
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.jumbotron{
+    background-color: #1d5ece;
+    background-size:contain;
+    padding: 20px 30px;
+    border-radius: 5rem 2rem;
+    text-align: center;
+}
+.jumbotron p{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #1445b7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #1d5ece;
+}
+
+footer {
+    background-color: #1319c2;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+footer h1{
+    font-size: medium;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+footer .social-media a,
+footer .footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+footer .social-media a:hover,
+footer .footer-nav a:hover {
+    text-decoration: underline;
+}
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeta Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+            background-color: #0a036d;           
+            color: #000080;
+            height: 500%;
+        }
+        header {
+            background: #000080;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header img {
+            max-width: 100px;
+        }
+        .news-ticker {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 500px;
+            margin-right: 20px;
+        }
+        .news-ticker p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 10s linear infinite;
+            color: #ffffff;
+        }
+        @keyframes ticker {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .hero-section {
+            position: relative;
+            text-align: center;
+            background: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126262&authkey=%21AEJEAgCLGO-fN4w&width=1920&height=1080') no-repeat center center/cover;
+            height: 90vh;
+            color: #ffffff;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126260&authkey=%21AHFbAvHevlx-iDk&width=1920&height=1080'); }
+            25% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126256&authkey=%21ALqm9xqPmw2C7dw&width=1920&height=1080'); }
+            50% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126257&authkey=%21AAFvSQZWlWN9ldo&width=1920&height=1080'); }
+            75% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126258&authkey=%21AM4Vs6j7Ugl7AaE&width=1920&height=1080'); }
+            100% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126256&authkey=%21ALqm9xqPmw2C7dw&width=1920&height=1080'); }
+        }
+        .hero-section .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .hero-section .content h1 {
+            font-size: 50px;
+            margin: 0;
+            text-shadow: 2px 2px 4px #000080;
+        }
+        .hero-section .content p {
+            font-size: 20px;
+            text-shadow: 1px 1px 2px #000080;
+        }
+        .hero-section .content a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 30px;
+            background-color: #87ceeb;
+            color: #000080;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .hero-section .content a:hover {
+            background-color: #000080;
+            color: #ffffff;
+        }
+        footer {
+            background: #000080;
+            padding: 20px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+        footer a {
+            color: #87ceeb;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <iframe width="50" height="50" src="https://xd.adobe.com/embed/cd9d6993-3766-48c4-870b-985556294377-98ce/" frameborder="0" allowfullscreen></iframe>
+        <nav>
+            <div class="news-ticker">               
+                <p>ZetaSpot is now available in Embu!</p><br>
+            </div>            
+        </nav>
+    </header>
+    <div class="hero-section">
+        <div class="content">
+            <h1>Get Connected to the World</h1>
+            <p>Experience the best Tech Solutions</p>
+            <a href="Home.html">Get Started</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 ZetaHub. All rights reserved.</p>
+        <a href="https://onedrive.live.com/embed?resid=6E328A87737901D5%2125831&authkey=!AO6Y3jQZJLu3Vhg&em=2">Privacy Policy</a> | 
+        <a href="https://onedrive.live.com/embed?resid=6E328A87737901D5%2125839&authkey=!AIuXPPJFvealJ7E&em=2">Terms of Service</a>
+    </footer>
+</body>
+</html>

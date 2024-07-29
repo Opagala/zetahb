@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeta Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+            background-color: #f0f8ff;
+            color: #000080;
+            width: 100%;
+        }
+        header {
+            background: #000080;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        header img {
+            max-width: 100px;
+        }
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        nav .nav-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #87ceeb;
+        }
+        .news-ticker {
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+            margin-right: 20px;
+        }
+        .news-ticker p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 10s linear infinite;
+            color: #ffffff;
+        }
+        @keyframes ticker {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .hero-section {
+            position: relative;
+            text-align: center;
+            background: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126102&authkey=%21AF382-KA2Y86cNE&width=1920&height=1080') no-repeat center center/cover;
+            height: 70vh;
+            color: #ffffff;
+            animation: backgroundAnimation 10s infinite;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126260&authkey=%21AHFbAvHevlx-iDk&width=1920&height=1080'); }
+            25% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126256&authkey=%21ALqm9xqPmw2C7dw&width=1920&height=1080'); }
+            50% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126257&authkey=%21AAFvSQZWlWN9ldo&width=1920&height=1080'); }
+            75% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126258&authkey=%21AM4Vs6j7Ugl7AaE&width=1920&height=1080'); }
+            100% { background-image: url('https://onedrive.live.com/embed?resid=6E328A87737901D5%2126256&authkey=%21ALqm9xqPmw2C7dw&width=1920&height=1080'); }
+        }
+        .hero-section .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .hero-section .content h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px #000080;
+        }
+        .hero-section .content p {
+            font-size: 1em;
+            text-shadow: 1px 1px 2px #000080;
+        }
+        .hero-section .content a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 30px;
+            background-color: #87ceeb;
+            color: #000080;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .hero-section .content a:hover {
+            background-color: #000080;
+            color: #ffffff;
+        }
+        .features {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ffffff;
+            color: #000080;
+        }
+        .features h2 {
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        .features .feature {
+            display: inline-block;
+            width: 100%;
+            max-width: 350px;
+            margin: 1%;
+            background-color: #87ceeb;
+            padding: 20px;
+            border-radius: 10px;
+            color: #ffffff;
+            transition: background-color 0.3s;
+        }
+        .features .feature:hover {
+            background-color: #000080;
+        }
+        .features .feature img {
+            width: 100%;
+            max-width: 375px;
+            margin-bottom: 15px;
+        }
+        .features .feature h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .news {
+            padding: 50px 20px;
+            background-color: #f0f8ff;
+            color: #000080;
+        }
+        .news h2 {
+            margin-bottom: 30px;
+            font-size: 2em;
+            text-align: center;
+        }
+        .news .news-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .news .news-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .news .news-item img {
+            width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+        footer {
+            background: #000080;
+            padding: 20px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+        footer a {
+            color: #87ceeb;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+            }
+            nav a {
+                margin: 0 5px;
+                font-size: 14px;
+            }
+            .news-ticker {
+                width: 100%;
+                max-width: none;
+                margin: 10px 0;
+            }
+            .hero-section .content h1 {
+                font-size: 2em;
+            }
+            .hero-section .content p {
+                font-size: 0.875em;
+            }
+            .hero-section .content a {
+                font-size: 0.875em;
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .features .feature {
+                width: 100%;
+                margin: 10px 0;
+            }
+            .news .news-item {
+                flex-direction: column;
+            }
+            .news .news-item img {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <iframe width="50" height="50" src="https://xd.adobe.com/embed/cd9d6993-3766-48c4-870b-985556294377-98ce/" frameborder="0" allowfullscreen></iframe>
+        <nav>
+            <div class="news-ticker">
+                <p>ZetaSpot is now available in Embu!</p>
+            </div>
+            <div class="nav-links">
+                <a href="Products.html">Products</a>                
+                <a href="About us.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <div class="hero-section">
+        <div class="content">
+            <h1>Get Connected to the World</h1>
+            <p>Experience the best Tech Solutions</p>            
+        </div>
+    </div>
+    <section class="features">
+        <h2>Our Products</h2>
+        <div class="feature">
+            <iframe width="100%" height="400" src="https://xd.adobe.com/embed/e21b87b4-a4d3-4c5b-873b-60652b8469d1-b748/" frameborder="0" allowfullscreen></iframe>
+            <h3>Z-Tech Spot</h3>
+        </div>
+        <div class="feature">
+            <iframe width="100%" height="400" src="https://xd.adobe.com/embed/623e3d9b-3791-4690-86be-8331555abac2-376d/" frameborder="0" allowfullscreen></iframe>
+            <h3>Z-Tech Wifi</h3>
+        </div>
+        <div class="feature" onclick="window.location='ZWS.html'">            
+            <iframe width="100%" height="400" src="https://xd.adobe.com/embed/fe231c55-2f22-4baf-aba2-d3b2a04c5091-ab70/" frameborder="0" allowfullscreen></iframe>
+             <h3>Z-Tech Wifi Solutions</h3>           
+        </div>
+        <div class="feature">
+            <iframe width="100%" height="400" src="https://xd.adobe.com/embed/f412490a-16c3-4a1e-8e78-1f3e03d6a640-a141/" frameborder="0" allowfullscreen></iframe>
+            <h3>Z-Tech Systems</h3>
+        </div>
+    </section>
+    <section class="news">
+        <h2>News</h2>
+        <div class="news-item">
+            <div>
+                <h3>Exciting New Product Launch</h3>
+                <p>We are thrilled to announce the launch of our new Z-Tech Wifi, offering faster and more reliable internet connectivity.</p>
+            </div>
+            <iframe width="100%" height="150" src="https://xd.adobe.com/embed/c1e1ba4b-8d0c-464e-a11d-baaea18572f4-94b2/" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="news-item">
+            <div>
+                <h3>ZetaSpot Expansion</h3>
+                <p>ZetaSpot is now available in Embu, bringing advanced tech solutions to more regions.</p>
+            </div>
+            <iframe width="100%" height="150" src="https://xd.adobe.com/embed/0b75f620-6231-4e65-8743-02b0588b64d9-5e26/" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="news-item">
+            <div>
+                <h3>Upcoming Webinar</h3>
+                <p>Join us for an informative webinar on the latest trends in tech solutions. Register now!</p>
+            </div>
+            <iframe width="100%" height="150" src="https://xd.adobe.com/embed/eaa4ea38-a465-4a35-8111-856b86290989-bff7/" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 ZetaHub. All rights reserved.</p>
+        <a href="https://onedrive.live.com/embed?resid=6E328A87737901D5%2125831&authkey=!AO6Y3jQZJLu3Vhg&em=2">Privacy Policy</a> | 
+        <a href="https://onedrive.live.com/embed?resid=6E328A87737901D5%2125839&authkey=!AIuXPPJFvealJ7E&em=2">Terms of Service</a>
+    </footer>
+</body>
+</html>
